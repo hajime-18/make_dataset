@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>表構造アノテーション</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header id="topbar">
+  <button id="toggleList" title="画像一覧の表示/非表示">☰</button>
+  <strong>表構造アノテーション</strong>
+  <span id="progress"></span>
+  <span class="spacer"></span>
+  <button id="prevBtn" title="前の画像 (PageUp)">◀ 前へ</button>
+  <span id="curName">—</span>
+  <span id="curStatus" class="badge"></span>
+  <button id="nextBtn" title="次の画像 (PageDown)">次へ ▶</button>
+  <button id="helpBtn">操作方法</button>
+</header>
+
+<div id="main">
+  <aside id="sidebar">
+    <div class="side-head">
+      <select id="filter">
+        <option value="all">すべて</option>
+        <option value="todo">未着手</option>
+        <option value="done">作成済み</option>
+        <option value="skipped">スキップ</option>
+      </select>
+      <input id="search" type="search" placeholder="ファイル名で絞り込み">
+    </div>
+    <ul id="imgList"></ul>
+  </aside>
+
+  <section id="viewerPane">
+    <div class="pane-tools">
+      <button id="fitBtn" title="全体を表示 (F)">全体</button>
+      <button id="fitWBtn" title="横幅に合わせる (W)">横幅</button>
+      <button id="z100Btn" title="等倍 (1)">100%</button>
+      <span id="zoomLabel"></span>
+      <label><input type="checkbox" id="guideChk" checked> ガイド線</label>
+    </div>
+    <div id="viewer">
+      <img id="img" alt="" draggable="false">
+      <div id="guideH" class="guide"></div>
+      <div id="guideV" class="guide"></div>
+      <div id="noImage">左の一覧から画像を選んでください</div>
+    </div>
+  </section>
+
+  <div id="splitter" title="ドラッグで幅を変更"></div>
+
+  <section id="editorPane">
+    <div class="pane-tools wrap">
+      <label>行 <input type="number" id="rowsIn" min="1" max="300"></label>
+      <label>列 <input type="number" id="colsIn" min="1" max="100"></label>
+      <button id="applySizeBtn">大きさを適用</button>
+      <span class="sep"></span>
+      <label>見出し行数 <input type="number" id="headIn" min="0"></label>
+      <button id="headToSelBtn" title="選択範囲の下端までを見出しにする (H)">選択行までを見出しに</button>
+    </div>
+    <div class="pane-tools wrap">
+      <button id="mergeBtn" title="結合 (M)">結合</button>
+      <button id="unmergeBtn" title="結合を解除 (U)">解除</button>
+      <span class="sep"></span>
+      <button id="insRowAboveBtn" title="上に行を挿入 (Shift+R)">行↑挿入</button>
+      <button id="insRowBelowBtn" title="下に行を挿入 (R)">行↓挿入</button>
+      <button id="insColLeftBtn" title="左に列を挿入 (Shift+C)">列←挿入</button>
+      <button id="insColRightBtn" title="右に列を挿入 (C)">列→挿入</button>
+      <button id="delRowBtn" title="選択行を削除 (Shift+Delete)">行削除</button>
+      <button id="delColBtn" title="選択列を削除 (Ctrl+Delete)">列削除</button>
+      <span class="sep"></span>
+      <button id="undoBtn" title="元に戻す (Ctrl+Z)">↶</button>
+      <button id="redoBtn" title="やり直し (Ctrl+Y)">↷</button>
+      <button id="copyPrevBtn" title="直前に保存した表の構造をコピー">直前の構造をコピー</button>
+      <label class="right">セル幅 <input type="range" id="cellSize" min="18" max="70" value="44"></label>
+    </div>
+    <div id="info"></div>
+    <div id="gridWrap"><table id="grid"></table></div>
+    <div id="bottom">
+      <div id="messages"></div>
+      <details id="htmlBox">
+        <summary>正解HTML（プレビュー）</summary>
+        <pre id="htmlPreview"></pre>
+      </details>
+      <div class="save-row">
+        <input id="noteIn" type="text" placeholder="メモ（迷った点、スキップ理由など）">
+        <button id="skipBtn" class="ghost" title="この画像を対象外にする">スキップ</button>
+        <button id="saveBtn" title="保存 (Ctrl+S)">保存</button>
+        <button id="saveNextBtn" class="primary" title="保存して次へ (Ctrl+Enter)">保存して次へ</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<dialog id="help">
+  <h3>操作方法</h3>
+  <table class="keys">
+    <tr><td>セルをドラッグ / Shift+クリック</td><td>範囲選択（行番号・列記号のクリックで行・列全体）</td></tr>
+    <tr><td>矢印 / Shift+矢印</td><td>選択の移動 / 範囲の拡大</td></tr>
+    <tr><td>M / U</td><td>結合 / 結合の解除</td></tr>
+    <tr><td>R / Shift+R</td><td>下に行を挿入 / 上に行を挿入</td></tr>
+    <tr><td>C / Shift+C</td><td>右に列を挿入 / 左に列を挿入</td></tr>
+    <tr><td>Shift+Delete / Ctrl+Delete</td><td>選択行を削除 / 選択列を削除</td></tr>
+    <tr><td>H</td><td>選択範囲の下端までを見出し行にする</td></tr>
+    <tr><td>Ctrl+Z / Ctrl+Y</td><td>元に戻す / やり直し</td></tr>
+    <tr><td>Ctrl+S / Ctrl+Enter</td><td>保存 / 保存して次へ</td></tr>
+    <tr><td>PageUp / PageDown</td><td>前の画像 / 次の画像</td></tr>
+    <tr><td>画像: ホイール / ドラッグ</td><td>拡大縮小 / 移動（F: 全体、W: 横幅、1: 等倍）</td></tr>
+  </table>
+  <p>見出し（thead）は表の上からの行数で指定します。見出しと本文をまたぐ結合はできません。</p>
+  <form method="dialog"><button>閉じる</button></form>
+</dialog>
+
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
