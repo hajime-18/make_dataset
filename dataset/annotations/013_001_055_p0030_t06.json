@@ -1,0 +1,14 @@
+{
+ "id": "013_001_055_p0030_t06",
+ "image": "013_001_055_p0030_t06.png",
+ "status": "skipped",
+ "note": "same table",
+ "structure": {
+  "rows": 5,
+  "cols": 4,
+  "header_rows": 1,
+  "merges": []
+ },
+ "html": null,
+ "updated_at": "2026-11-16T14:12:09"
+}

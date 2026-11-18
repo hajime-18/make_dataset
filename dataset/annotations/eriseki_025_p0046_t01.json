@@ -1,0 +1,14 @@
+{
+ "id": "eriseki_025_p0046_t01",
+ "image": "eriseki_025_p0046_t01.png",
+ "status": "skipped",
+ "note": "表の一部",
+ "structure": {
+  "rows": 5,
+  "cols": 4,
+  "header_rows": 1,
+  "merges": []
+ },
+ "html": null,
+ "updated_at": "2026-11-17T11:49:59"
+}

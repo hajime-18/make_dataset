@@ -11,7 +11,7 @@ __pycache__/
 
 # 入力画像・出力データセット（データはGitで管理しない）
 images/
-dataset/
+# dataset/
 
 # 環境変数・秘密情報
 .env

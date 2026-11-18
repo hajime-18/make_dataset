@@ -1,0 +1,21 @@
+{
+ "id": "eriseki_025_p0064_t02",
+ "image": "eriseki_025_p0064_t02.png",
+ "status": "done",
+ "note": "",
+ "structure": {
+  "rows": 10,
+  "cols": 4,
+  "header_rows": 2,
+  "merges": [
+   [
+    0,
+    0,
+    2,
+    1
+   ]
+  ]
+ },
+ "html": "<table><thead><tr><td rowspan=\"2\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>",
+ "updated_at": "2026-11-17T10:57:43"
+}
