@@ -1,0 +1,14 @@
+{
+ "id": "eriseki_024_p0028_t02",
+ "image": "eriseki_024_p0028_t02.png",
+ "status": "done",
+ "note": "",
+ "structure": {
+  "rows": 8,
+  "cols": 8,
+  "header_rows": 1,
+  "merges": []
+ },
+ "html": "<table><thead><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+ "updated_at": "2026-11-16T14:57:02"
+}

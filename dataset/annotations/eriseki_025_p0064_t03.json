@@ -1,0 +1,14 @@
+{
+ "id": "eriseki_025_p0064_t03",
+ "image": "eriseki_025_p0064_t03.png",
+ "status": "done",
+ "note": "",
+ "structure": {
+  "rows": 5,
+  "cols": 4,
+  "header_rows": 1,
+  "merges": []
+ },
+ "html": "<table><thead><tr><td></td><td></td><td></td><td></td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>",
+ "updated_at": "2026-11-17T11:44:15"
+}

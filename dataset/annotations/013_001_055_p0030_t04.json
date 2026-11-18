@@ -1,0 +1,14 @@
+{
+ "id": "013_001_055_p0030_t04",
+ "image": "013_001_055_p0030_t04.png",
+ "status": "skipped",
+ "note": "同じ表が含まれる",
+ "structure": {
+  "rows": 5,
+  "cols": 4,
+  "header_rows": 1,
+  "merges": []
+ },
+ "html": null,
+ "updated_at": "2026-11-16T14:11:39"
+}
